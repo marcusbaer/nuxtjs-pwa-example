@@ -1,0 +1,58 @@
+
+{
+	"masterPicture": "static/android-chrome-512x512.png",
+	"iconsPath": "/",
+	"design": {
+		"ios": {
+			"pictureAspect": "noChange",
+			"assets": {
+				"ios6AndPriorIcons": false,
+				"ios7AndLaterIcons": false,
+				"precomposedIcons": false,
+				"declareOnlyDefaultIcon": true
+			},
+			"appName": "Example PWA"
+		},
+		"desktopBrowser": {},
+		"windows": {
+			"pictureAspect": "noChange",
+			"backgroundColor": "#2d89ef",
+			"onConflict": "override",
+			"assets": {
+				"windows80Ie10Tile": false,
+				"windows10Ie11EdgeTiles": {
+					"small": false,
+					"medium": true,
+					"big": false,
+					"rectangle": false
+				}
+			},
+			"appName": "Example PWA"
+		},
+		"androidChrome": {
+			"pictureAspect": "noChange",
+			"themeColor": "#686868",
+			"manifest": {
+				"name": "Example",
+				"display": "standalone",
+				"orientation": "portrait",
+				"onConflict": "override",
+				"declared": true
+			},
+			"assets": {
+				"legacyIcon": false,
+				"lowResolutionIcons": false
+			}
+		},
+		"safariPinnedTab": {
+			"pictureAspect": "blackAndWhite",
+			"threshold": 29.6875,
+			"themeColor": "#006837"
+		}
+	},
+	"settings": {
+		"compression": 3,
+		"scalingAlgorithm": "Mitchell",
+		"errorOnImageTooSmall": false
+	}
+}

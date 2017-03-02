@@ -11,6 +11,7 @@
     "test": "ava",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
+    "favicon": "real-favicon generate faviconDescription.json faviconData.json outputDir",
     "ava": {
       "require": [
         "babel-register"
@@ -43,6 +44,7 @@
   "devDependencies": {
     "ava": "^0.18.2",
     "babel-eslint": "^7.1.1",
+    "cli-real-favicon": "^0.0.6",
     "eslint": "^3.16.1",
     "eslint-config-standard": "^7.0.0",
     "eslint-plugin-html": "^2.0.1",
