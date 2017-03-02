@@ -1,5 +1,7 @@
 {
-    "name": "Example",
+    "name": "Example PWA",
+    "short_name": "Example",
+    "description": "Example of nuxt.js with PWA support",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,5 +17,6 @@
     "theme_color": "#686868",
     "background_color": "#686868",
     "display": "standalone",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "lang": "de"
 }

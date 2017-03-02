@@ -1,6 +1,9 @@
 <template>
   <div>
-    <header>HEADER</header>
+    <header>
+      <h1>Example PWA</h1>
+      <div class="onlinedot"></div>
+    </header>
     <main>
       <div class="container">
         <div class="row with-margins">
