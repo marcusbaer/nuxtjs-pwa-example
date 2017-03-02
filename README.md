@@ -23,3 +23,8 @@ This project is a playground for an application based on nuxt.js
 - http://favicons.io/ to generate a favicon
 - http://realfavicongenerator.net/ to generate a manifest.json
 - https://manifest-validator.appspot.com/ for manifest validation
+
+## Next things to try out
+
+- Firebase auth integration
+- Walkie Talkie
