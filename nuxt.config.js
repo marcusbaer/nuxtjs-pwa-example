@@ -1,6 +1,10 @@
 module.exports = {
+  'app-tools': {
+    'storedRequests': ''
+  },
   build: {
     vendor: [
+      // 'vue-app-tools',
       'axios'
     ]
   },
@@ -39,7 +43,7 @@ module.exports = {
     height: '10px'
   },
   plugins: [
-    // '~plugins/vue-app-tools'
+    '~plugins/vue-app-tools'
   ],
   store: true
 }
