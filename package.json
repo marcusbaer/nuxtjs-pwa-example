@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Nuxt environment with PWA support",
   "engines": {
-    "node": ">=7.7.1"
+    "node": ">=7.6.0"
   },
   "repository": {
     "type": "git",
