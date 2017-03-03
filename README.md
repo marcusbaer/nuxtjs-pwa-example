@@ -14,9 +14,15 @@ This project is a playground for an application based on nuxt.js
 
 	$ npm test
 
+## Build
+
+  $ npm run build
+  $ npm start
+
 ## Deploy with Now.sh
 
-    $ now
+  $ npm run build
+  $ now
 
 ## Tools
 
