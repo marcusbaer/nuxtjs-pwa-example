@@ -1,7 +1,4 @@
 module.exports = {
-  'app-tools': {
-    'storedRequests': ''
-  },
   build: {
     vendor: [
       // 'vue-app-tools',
@@ -53,7 +50,7 @@ module.exports = {
     height: '10px'
   },
   plugins: [
-    '~plugins/vue-app-tools'
+    '~plugins/i18n'
   ],
   store: true
 }

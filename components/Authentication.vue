@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form v-if="!$store.state.authUser" @submit.prevent="login">
+    <form v-if="!$store.state.auth.authUser" @submit.prevent="login">
       <h1>Bitte melden Sie sich, um geschützte Inhalte sehen zu können!</h1>
       <p class="error" v-if="formError">{{ formError }}</p>
       <p><i>Verwenden Sie <b>demo</b> als Benutzer und <b>demo</b> als Passwort.</i></p>
@@ -9,7 +9,7 @@
       <button type="submit">Login</button>
     </form>
     <div v-else>
-      <h1>Hallo {{ $store.state.authUser.username }}!</h1>
+      <h1>Hallo {{ $store.state.auth.authUser.username }}!</h1>
       <pre>Ich bin nur für angemeldete Benutzer sichtbar.</pre>
       <p><i>Sie können auch die Seite neu laden, ohne die Verbindung zu verlieren!</i></p>
       <slot />
@@ -29,7 +29,7 @@
     },
     methods: {
       login () {
-        this.$store.dispatch('login', {
+        this.$store.dispatch('auth/login', {
           username: this.formUsername,
           password: this.formPassword
         })
@@ -43,7 +43,7 @@
         })
       },
       logout () {
-        this.$store.dispatch('logout')
+        this.$store.dispatch('auth/logout')
       }
     }
   }

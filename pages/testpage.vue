@@ -4,6 +4,9 @@
 
 <script>
 export default {
+  head: {
+    title: 'Testpage'
+  },
   data () {
     return { name: 'world' }
   }

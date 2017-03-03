@@ -8,9 +8,19 @@
     <main>
       <nuxt/>
     </main>
-    <footer>FOOTER</footer>
+    <footer>{{ $t('footer.title') }}</footer>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    path (url) {
+      return (this.$store.state.lang.lang === 'en' ? url : '/' + this.$store.state.lang.lang + url)
+    }
+  }
+}
+</script>
 
 <style>
 .Header__Img {

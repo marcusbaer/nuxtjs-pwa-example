@@ -26,26 +26,23 @@
       }
     },
     computed: {
-      isAuthenticated () {
-        return this.$store.state.userIsAuthenticated
-      },
       todos () {
-        return this.$store.state.todos || [ { text: 'Add some todos', done: false } ]
+        return this.$store.state.todos.todos || [ { text: 'Add some todos', done: false } ]
       }
     },
     methods: {
       addTodo: function () {
         var newTodoText = this.newTodo.trim()
         if (newTodoText) {
-          this.$store.dispatch('addTodo', newTodoText)
+          this.$store.dispatch('todos/addTodo', newTodoText)
           this.newTodo = ''
         }
       },
       removeTodo: function (todo) {
-        this.$store.dispatch('removeTodo', todo)
+        this.$store.dispatch('todos/removeTodo', todo)
       },
       toggleTodo: function (todo) {
-        this.$store.dispatch('toggleTodo', todo)
+        this.$store.dispatch('todos/toggleTodo', todo)
       }
     }
   }

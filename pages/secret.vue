@@ -8,6 +8,9 @@
 
 <script>
 export default {
+  head: {
+    title: 'Secret'
+  },
   middleware: 'auth'
 }
 </script>
