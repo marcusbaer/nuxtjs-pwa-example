@@ -23,7 +23,7 @@ This project is a playground for an application based on nuxt.js
 
   $ npm run build
   $ now
-  $ now -e NODE_ENV=production
+  $ now -e PORT=3000 -e NODE_ENV=production
   $ now -e API_KEY=@acme-api-key -e APP_NAME="ZEIT, Inc"
 
   $ now secret add acme-api-key my-value-here
