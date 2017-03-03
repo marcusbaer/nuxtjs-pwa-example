@@ -9,8 +9,13 @@
     "title": "Willkommen",
     "introduction": "Das ist ein einleitender Text auf Deutsch.",
     "renderer": "Seite gerendert von",
-    "secretLink": "Super geheime Seite",
     "todoTitle": "Öffentliche Checkliste"
+  },
+  "links": {
+    "home": "Startseite",
+    "secret": "Geheime Seite",
+    "english": "EN",
+    "german": "DE"
   },
   "offline": {
     "title": "Offline",

@@ -12,9 +12,6 @@
         </authentication>
       </div>
       <div class="col-sm-6">
-        <p><nuxt-link to="/secret">{{ $t('home.secretLink') }}</nuxt-link></p>
-      </div>
-      <div class="col-sm-6">
         <todo :title="todoTitle"></todo>
       </div>
     </div>

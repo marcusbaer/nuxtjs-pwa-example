@@ -9,8 +9,13 @@
     "title": "Welcome",
     "introduction": "This is an introduction in English.",
     "renderer": "Page rendered by",
-    "secretLink": "Super secret page",
     "todoTitle": "Public checklist"
+  },
+  "links": {
+    "home": "Home",
+    "secret": "Secret page",
+    "english": "EN",
+    "german": "DE"
   },
   "offline": {
     "title": "Offline",

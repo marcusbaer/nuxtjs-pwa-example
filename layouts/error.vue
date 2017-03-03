@@ -1,12 +1,12 @@
 <template>
   <div class="error-page">
-    <div>
-      <h1 class="error-code">{{ error.statusCode }}</h1>
-      <div class="error-wrapper-message">
-        <h2 class="error-message">{{ error.message }}</h2>
-      </div>
-      <p v-if="error.statusCode === 404"><nuxt-link class="error-link" to="/">Back to the home page</nuxt-link></p>
+    <h1 class="error-code">{{ error.statusCode }}</h1>
+    <div class="error-wrapper-message">
+      <h2 class="error-message">{{ error.message }}</h2>
     </div>
+    <p v-if="error.statusCode === 404">
+      <nuxt-link class="error-link" :to="path('/')" exact>{{ $t('links.home') }}</nuxt-link>
+    </p>
   </div>
 </template>
 
@@ -16,6 +16,11 @@ export default {
   head () {
     return {
       title: this.error.message || 'An error occured'
+    }
+  },
+  methods: {
+    path (url) {
+      return (this.$store.state.lang.lang === 'en' ? url : '/' + this.$store.state.lang.lang + url)
     }
   }
 }
