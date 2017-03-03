@@ -1,21 +1,11 @@
 <template>
-  <div>
-    <header>
-      <h1>Example PWA</h1>
-      <div class="onlinedot"></div>
-    </header>
-    <main>
-      <div class="container">
-        <div class="row with-margins">
-          <div class="col-md-12">
-            <p>{{ msg }} / {{ name }}</p>
-          </div>
-        </div>
+  <div class="container">
+    <div class="row with-margins">
+      <div class="col-md-12">
+        <p>{{ msg }} / {{ name }}</p>
       </div>
-    </main>
-    <footer>OFFLINE</footer>
+    </div>
   </div>
-
 </template>
 
 <script>

@@ -12,6 +12,7 @@
       <h1>Hallo {{ $store.state.authUser.username }}!</h1>
       <pre>Ich bin nur für angemeldete Benutzer sichtbar.</pre>
       <p><i>Sie können auch die Seite neu laden, ohne die Verbindung zu verlieren!</i></p>
+      <slot />
       <button @click="logout">Logout</button>
     </div>
   </div>

@@ -10,8 +10,7 @@ const store = new Vuex.Store({
     env: null,
     todos: [],
     storedRequests: [],
-    user: {},
-    userIsAuthenticated: null
+    user: {}
   },
   mutations: {
     env (state, env) {
