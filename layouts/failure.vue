@@ -25,10 +25,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 main {
   padding: 2rem 0;
-  background-color: rgba(255, 0, 0, 0.3);
 }
 
 <style>
