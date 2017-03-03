@@ -18,5 +18,6 @@
     "background_color": "#686868",
     "display": "standalone",
     "orientation": "portrait",
-    "lang": "de"
+    "lang": "de",
+    "gcm_sender_id": "103953800507"
 }

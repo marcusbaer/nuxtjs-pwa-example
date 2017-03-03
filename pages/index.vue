@@ -13,6 +13,9 @@
           <div class="col-md-6">
             <todo title="Checkliste"></todo>
           </div>
+          <div class="col-md-6">
+            <message></message>
+          </div>
         </div>
       </div>
     </main>
@@ -23,13 +26,14 @@
 
 <script>
   import axios from 'axios'
+  import Message from '../components/Message'
   import Todo from '../components/Todo'
 
   export default {
     head: {
       title: 'Welcome'
     },
-    components: { Todo },
+    components: { Message, Todo },
     created () {
       // this.loadMessages()
     },
