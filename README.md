@@ -38,5 +38,7 @@ This project is a playground for an application based on nuxt.js
 
 ## Next things to try out
 
+- sw-cache
+- capture-card
 - Firebase auth integration
 - Walkie Talkie
