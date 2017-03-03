@@ -6,6 +6,7 @@
     </header>
     <main>
       <div class="container">
+
         <div class="row with-margins">
           <div class="col-md-6">
             <p>Rendered by {{name}}.</p>
@@ -16,7 +17,12 @@
           <div class="col-md-6">
             <message></message>
           </div>
+          <div class="col-md-6">
+            <authentication></authentication>
+            <p><nuxt-link to="/secret">Super geheime Seite</nuxt-link></p>
+          </div>
         </div>
+
       </div>
     </main>
     <footer>FOOTER</footer>
@@ -26,21 +32,25 @@
 
 <script>
   import axios from 'axios'
-  import Message from '../components/Message'
-  import Todo from '../components/Todo'
+  import Authentication from '~components/Authentication'
+  import Message from '~components/Message'
+  import Todo from '~components/Todo'
 
   export default {
     head: {
       title: 'Welcome'
     },
-    components: { Message, Todo },
+    components: { Authentication, Message, Todo },
     created () {
       // this.loadMessages()
     },
     data ({ req }) {
       return {
         counter: 0,
-        name: req ? 'server' : 'client'
+        name: req ? 'server' : 'client',
+        formError: null,
+        formUsername: '',
+        formPassword: ''
       }
     },
     methods: {
@@ -52,6 +62,23 @@
           })
           .catch(() => {})
         }
+      },
+      login () {
+        this.$store.dispatch('login', {
+          username: this.formUsername,
+          password: this.formPassword
+        })
+        .then(() => {
+          this.formUsername = ''
+          this.formPassword = ''
+          this.formError = null
+        })
+        .catch((e) => {
+          this.formError = e.message
+        })
+      },
+      logout () {
+        this.$store.dispatch('logout')
       }
     }
   }
@@ -60,5 +87,8 @@
 <style>
   .with-margins {
     margin: 1rem 0;
+  }
+  .error {
+    color: red;
   }
 </style>

@@ -21,7 +21,7 @@
     methods: {
       send () {
         if (this.body) {
-          Notification(this.title, {
+          new Notification(this.title, { // eslint-disable-line no-new
             lang: this.lang,
             tag: this.tag,
             icon: this.icon,

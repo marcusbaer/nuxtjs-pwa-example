@@ -9,11 +9,11 @@
     "type": "git",
     "url": "git@github.com:marcusbaer/nuxtjs-pwa-example.git"
   },
+  "main": "server.js",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "node server.js",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
+    "start": "cross-env NODE_ENV=production & node server.js",
     "test": "ava",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
@@ -33,8 +33,12 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
+    "body-parser": "^1.17.0",
     "bootstrap": "^3.3.7",
+    "cross-env": "^3.1.4",
     "css-loader": "^0.26.2",
+    "express": "^4.15.0",
+    "express-session": "^1.15.1",
     "node-sass": "^4.5.0",
     "nuxt": "latest",
     "path": "^0.12.7",
