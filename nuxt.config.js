@@ -49,6 +49,9 @@ module.exports = {
     color: 'red',
     height: '10px'
   },
+  router: {
+    middleware: 'i18n'
+  },
   plugins: [
     '~plugins/i18n'
   ],

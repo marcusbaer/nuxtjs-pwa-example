@@ -1,19 +1,18 @@
 <template>
   <div>
     <form v-if="!$store.state.auth.authUser" @submit.prevent="login">
-      <h1>Bitte melden Sie sich, um geschützte Inhalte sehen zu können!</h1>
+      <h1>{{ $t('components.authentication.loginTitle') }}</h1>
       <p class="error" v-if="formError">{{ formError }}</p>
-      <p><i>Verwenden Sie <b>demo</b> als Benutzer und <b>demo</b> als Passwort.</i></p>
-      <p>Benutzer: <input type="text" v-model="formUsername" name="username" /></p>
-      <p>Passwort: <input type="password" v-model="formPassword" name="password" /></p>
-      <button type="submit">Login</button>
+      <p v-html="$t('components.authentication.userhint')"></p>
+      <p>{{ $t('components.authentication.username') }}: <input type="text" v-model="formUsername" name="username" /></p>
+      <p>{{ $t('components.authentication.password') }}: <input type="password" v-model="formPassword" name="password" /></p>
+      <button type="submit">{{ $t('components.authentication.login') }}</button>
     </form>
     <div v-else>
-      <h1>Hallo {{ $store.state.auth.authUser.username }}!</h1>
-      <pre>Ich bin nur für angemeldete Benutzer sichtbar.</pre>
-      <p><i>Sie können auch die Seite neu laden, ohne die Verbindung zu verlieren!</i></p>
+      <h1>{{ $t('components.authentication.hello') }} {{ $store.state.auth.authUser.username }}!</h1>
+      <div v-html="$t('components.authentication.introduction')"></div>
       <slot />
-      <button @click="logout">Logout</button>
+      <button @click="logout">{{ $t('components.authentication.logout') }}</button>
     </div>
   </div>
 </template>

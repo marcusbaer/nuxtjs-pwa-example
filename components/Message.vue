@@ -1,7 +1,7 @@
 <template>
   <div>
-    <input v-model="body" placeholder="Ihre Nachricht" v-on:keyup.enter="send">
-    <button v-on:click="send()">Senden</button>
+    <input v-model="body" :placeholder="$t('components.message.placeholder')" v-on:keyup.enter="send">
+    <button v-on:click="send()">{{ $t('components.message.submit') }}</button>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
       // https://developer.mozilla.org/de/docs/Web/API/Navigator/vibrate
       return {
         lang: 'de-DE',
-        title: 'Nachricht',
+        title: this.$t('components.message.title') || 'Message',
         body: null,
         tag: 'test',
         icon: '/android-chrome-192x192.png',

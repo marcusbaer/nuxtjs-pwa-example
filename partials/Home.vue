@@ -3,7 +3,8 @@
 
     <div class="row with-margins">
       <div class="col-sm-6">
-        <todo title="Öffentliche Checkliste"></todo>
+        <h1>{{ $t('home.title') }}</h1>
+        <p>{{ $t('home.introduction') }}</p>
       </div>
       <div class="col-sm-6">
         <authentication>
@@ -11,14 +12,15 @@
         </authentication>
       </div>
       <div class="col-sm-6">
-        <p><nuxt-link to="/secret">Super geheime Seite</nuxt-link></p>
+        <p><nuxt-link to="/secret">{{ $t('home.secretLink') }}</nuxt-link></p>
+      </div>
+      <div class="col-sm-6">
+        <todo :title="todoTitle"></todo>
       </div>
     </div>
 
     <div class="row with-margins">
-      <div class="col-sm-12">
-        Page rendered by {{ renderer }}.
-      </div>
+      <div class="col-sm-12">{{ $t('home.renderer') }} {{ renderer }}.</div>
     </div>
 
   </div>
@@ -39,17 +41,9 @@
     },
     data () {
       return {
-        counter: 0
+        counter: 0,
+        todoTitle: this.$t('home.todoTitle') || 'Checklist'
       }
     }
   }
 </script>
-
-<style>
-  .with-margins {
-    margin: 1rem 0;
-  }
-  .error {
-    color: red;
-  }
-</style>

@@ -1,29 +1,22 @@
 <template>
-  <div class="container">
-    <div class="row with-margins">
-      <div class="col-md-12">
-        <p>{{ msg }} / {{ name }}</p>
-      </div>
-    </div>
+  <div>
+    <offline :renderer="name" />
   </div>
 </template>
 
 <script>
+  import Offline from '~/partials/Offline'
+
   export default {
     head: {
       title: 'Offline'
     },
+    layout: 'failure',
+    components: { Offline },
     data ({ req }) {
       return {
-        msg: 'Sie haben gerade keine Verbindung ins Internet.',
         name: req ? 'server' : 'client'
       }
     }
   }
 </script>
-
-<style>
-  .with-margins {
-    margin: 1rem 0;
-  }
-</style>

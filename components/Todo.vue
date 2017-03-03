@@ -1,7 +1,7 @@
 <template>
   <div class="todos">
     <h1>{{ title }}</h1>
-    <input class="todo-add" v-model="newTodo" v-on:keyup.enter="addTodo" placeholder="Hinzufügen">
+    <input class="todo-add" v-model="newTodo" v-on:keyup.enter="addTodo" :placeholder="$t('components.todo.placeholder')">
     <div class="todo-list">
       <div v-for="todo in todos" class="todo-item">
         <div class="label" v-bind:class="{ done: todo.done }" v-on:click="toggleTodo(todo)">{{ todo.text }}</div>

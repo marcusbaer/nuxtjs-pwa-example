@@ -1,12 +1,13 @@
 <template>
   <div>
     <header>
-      <nuxt-link to="/"><img class="Header__Img" src="android-chrome-192x192.png" /></nuxt-link>
+      <img class="Header__Img" src="android-chrome-192x192.png" />
       <h1>{{ $t('header.title') }}</h1>
       <div class="onlinedot"></div>
     </header>
     <main>
       <nuxt/>
+      <nuxt-link to="/">Home</nuxt-link>
     </main>
     <footer>{{ $t('footer.title') }}</footer>
   </div>
@@ -23,10 +24,12 @@ export default {
 </script>
 
 <style>
-
 main {
   padding: 2rem 0;
+  background-color: rgba(255, 0, 0, 0.3);
 }
+
+<style>
 
 .with-margins {
   margin: 1rem 0;
@@ -35,4 +38,7 @@ main {
 .Header__Img {
   width: 1rem;
 }
+</style>
+
+
 </style>
