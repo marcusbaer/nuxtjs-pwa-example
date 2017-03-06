@@ -63,6 +63,15 @@ Stop and remove the docker-compose container set:
 docker-compose down -v
 ```
 
+Run with Saucelabs this way (at the moment):
+
+- rename nightwatch.sauce.conf.js to nightwatch.conf.js
+- create `.env` file with content:
+
+  SAUCE_USERNAME=<saucelab_username>
+  SAUCE_ACCESS_KEY=<saucelab_access_key>
+  LAUNCH_URL=<launch_url>
+
 ## Build
 
   $ npm run build

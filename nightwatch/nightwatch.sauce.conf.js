@@ -8,7 +8,7 @@ module.exports = {
         "enabled": false,
         "path": ""
       },
-      "launch_url": "http://app:5000", // process.env.LAUNCH_URL,
+      "launch_url": process.env.LAUNCH_URL,
       "selenium_host": "ondemand.saucelabs.com",
       "selenium_port": 80,
       "silent": true,

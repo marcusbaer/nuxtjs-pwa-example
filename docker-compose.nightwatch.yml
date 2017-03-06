@@ -4,11 +4,6 @@ services:
     build: .
     environment:
       - NODE_ENV=production
-  sauce:
-    image: ustwo/sauce-connect
-    ports:
-      - 8000:8000
-    command: -P 8000 -u ${SAUCE_USERNAME} -k ${SAUCE_ACCESS_KEY} --tunnel-identifier foo
   chromedriver:
     image: blueimp/chromedriver
     environment:
