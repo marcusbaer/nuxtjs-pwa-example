@@ -61,24 +61,6 @@
 //   })
 // }
 
-function initNetworkState () {
-  function offline () {
-    const dot = document.querySelector('.onlinedot')
-    dot.classList.add('offline')
-    dot.classList.remove('online')
-  }
-
-  function online () {
-    const dot = document.querySelector('.onlinedot')
-    dot.classList.remove('offline')
-    dot.classList.add('online')
-  }
-
-  window.addEventListener('online', online)
-  window.addEventListener('offline', offline)
-  navigator.onLine ? online() : offline()
-}
-
 // ask for permission to show notifications
 function permitNotifications () {
   if (Notification.permission === 'granted') { // user already gave permission
@@ -119,7 +101,3 @@ registerServiceWorker().then((swReg) => { // register service worker asynchronou
 }).catch((err) => {
   // console.log(err)
 })
-
-window.onload = function () {
-  initNetworkState()
-}

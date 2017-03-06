@@ -10,7 +10,7 @@
         <nuxt-link class="Header__Link Header__Lang" v-if="$store.state.lang.lang === 'en'" :to="`/de` + $route.fullPath" active-class="none">{{ $t('links.german') }}</nuxt-link>
         <nuxt-link class="Header__Link Header__Lang" v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" active-class="none">{{ $t('links.english') }}</nuxt-link>
       </nav>
-      <div class="onlinedot"></div>
+      <div class="onlinedot" v-bind:class="{online: online}"></div>
     </header>
     <main>
       <nuxt/>
@@ -21,10 +21,24 @@
 
 <script>
 export default {
+  data () {
+    return {
+      online: true
+    }
+  },
+  created () {
+    // this.initNetworkState()
+  },
   methods: {
     path (url) {
       return (this.$store.state.lang.lang === 'en' ? url : '/' + this.$store.state.lang.lang + url)
+    },
+    initNetworkState () {
+      // window.addEventListener('online', () => { this.online = true })
+      // window.addEventListener('offline', () => { this.online = false })
+      // navigator.onLine ? this.online() : this.offline()
     }
+
   }
 }
 </script>
@@ -69,6 +83,18 @@ main {
 
 .nuxt-link-active {
   font-weight: bold;
+}
+
+.onlinedot {
+  display: none;
+  height:1rem;
+  width:1rem;
+  border-radius:1rem;
+  background-color:#960606;
+}
+
+.onlinedot.online {
+  background-color:#028712;
 }
 
 </style>

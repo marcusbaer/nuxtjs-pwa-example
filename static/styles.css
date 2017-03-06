@@ -73,20 +73,6 @@ h1 {
     font-weight:700;
 }
 
-.onlinedot {
-    height:1rem;
-    width:1rem;
-    border-radius:1rem;
-}
-
-.onlinedot.online {
-    background-color:#028712;
-}
-
-.onlinedot.offline {
-    background-color:#960606;
-}
-
 footer {
     height:1.5rem;
     line-height:0.7rem;
