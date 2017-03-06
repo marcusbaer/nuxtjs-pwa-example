@@ -8,7 +8,7 @@
         <nuxt-link class="Header__Link" :to="path('/testpage')">{{ $t('links.test') }}</nuxt-link>
 
         <nuxt-link class="Header__Link Header__Lang" v-if="$store.state.lang.lang === 'en'" :to="`/de` + $route.fullPath" active-class="none">{{ $t('links.german') }}</nuxt-link>
-        <nuxt-link class="Header__Link" v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" active-class="none">{{ $t('links.english') }}</nuxt-link>
+        <nuxt-link class="Header__Link Header__Lang" v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" active-class="none">{{ $t('links.english') }}</nuxt-link>
       </nav>
       <div class="onlinedot"></div>
     </header>
