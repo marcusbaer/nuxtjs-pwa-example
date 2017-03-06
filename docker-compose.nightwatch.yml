@@ -4,6 +4,12 @@ services:
     build: .
     environment:
       - NODE_ENV=production
+  tunnel:
+    image: henrrich/docker-sauce-connect:latest
+    restart: always
+    ports:
+      - 4445:4445
+    command: -u ${SAUCE_USERNAME} -k ${SAUCE_ACCESS_KEY} -i my_sc_pool -p
   chromedriver:
     image: blueimp/chromedriver
     environment:
@@ -16,6 +22,7 @@ services:
     depends_on:
       - chromedriver
       - app
+      - tunnel
     environment:
       - WAIT_FOR_HOSTS=app:5000 chromedriver:4444 chromedriver:6060
       - SAUCE_USERNAME=${SAUCE_USERNAME}
