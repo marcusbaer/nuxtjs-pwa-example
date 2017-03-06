@@ -1,0 +1,22 @@
+version: '2'
+services:
+  app:
+    build: .
+    environment:
+      - NODE_ENV=production
+  chromedriver:
+    image: blueimp/chromedriver
+    environment:
+      - VNC_ENABLED=true
+      - EXPOSE_X11=true
+    ports:
+      - 5900:5900
+  nightwatch:
+    image: blueimp/nightwatch:0.9
+    depends_on:
+      - chromedriver
+      - app
+    environment:
+      - WAIT_FOR_HOSTS=app:5000 chromedriver:4444 chromedriver:6060
+    volumes:
+      - ./nightwatch:/home/node

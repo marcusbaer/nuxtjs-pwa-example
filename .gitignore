@@ -39,3 +39,7 @@ jspm_packages
 # Nuxt
 .nuxt
 dist
+
+# Nightwatch
+nightwatch/screenshots
+nightwatch/videos

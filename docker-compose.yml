@@ -1,0 +1,8 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+      - "5000" # dynamically set host port for scale
+    environment:
+      - NODE_ENV=production
