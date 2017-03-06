@@ -43,3 +43,6 @@ dist
 # Nightwatch
 nightwatch/screenshots
 nightwatch/videos
+
+# Docker Compose
+.env

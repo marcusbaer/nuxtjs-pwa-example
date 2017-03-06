@@ -18,5 +18,8 @@ services:
       - app
     environment:
       - WAIT_FOR_HOSTS=app:5000 chromedriver:4444 chromedriver:6060
+      - SAUCE_USERNAME=${SAUCE_USERNAME}
+      - SAUCE_ACCESS_KEY=${SAUCE_ACCESS_KEY}
+      - LAUNCH_URL=${LAUNCH_URL}
     volumes:
       - ./nightwatch:/home/node
