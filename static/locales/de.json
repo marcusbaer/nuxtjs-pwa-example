@@ -1,4 +1,8 @@
 {
+  "capturemap": {
+    "title": "Capture",
+    "introduction": "Nehmen Sie einen Videogruß auf!"
+  },
   "footer": {
     "title": "Füßchen"
   },
@@ -15,6 +19,7 @@
     "home": "Startseite",
     "secret": "Geheime Seite",
     "test": "Test",
+    "capturemap": "Videogruß",
     "english": "EN",
     "german": "DE"
   },

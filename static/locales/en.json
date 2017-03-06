@@ -1,4 +1,8 @@
 {
+  "capturemap": {
+    "title": "Capture",
+    "introduction": "Take a video shot!"
+  },
   "footer": {
     "title": "FOOTER"
   },
@@ -15,6 +19,7 @@
     "home": "Home",
     "secret": "Secret page",
     "test": "Test",
+    "capturemap": "Video shot",
     "english": "EN",
     "german": "DE"
   },
