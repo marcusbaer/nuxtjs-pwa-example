@@ -101,3 +101,4 @@ Run with Saucelabs this way (at the moment):
 - Firebase auth integration
 - Walkie Talkie
 - http://codepen.io/iamjoshellis/pen/yaAXmr/
+- http://peerjs.com/ OR simple-peer

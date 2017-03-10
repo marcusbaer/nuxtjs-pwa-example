@@ -15,6 +15,7 @@
     "home": "Startseite",
     "secret": "Geheime Seite",
     "test": "Test",
+    "capturemap": "Video",
     "english": "EN",
     "german": "DE"
   },
@@ -37,6 +38,10 @@
       "password": "Passwort",
       "userhint": "<i>Verwenden Sie <b>demo</b> als Benutzer und <b>demo</b> als Passwort.</i>",
       "username": "Benutzer"
+    },
+    "capturemap": {
+      "recordButtonStart": "Aufnahme starten",
+      "recordButtonStop": "Aufnahme stoppen"
     },
     "message": {
       "placeholder": "Ihre Nachricht",

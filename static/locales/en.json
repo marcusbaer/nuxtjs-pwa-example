@@ -15,6 +15,7 @@
     "home": "Home",
     "secret": "Secret page",
     "test": "Test",
+    "capturemap": "Video",
     "english": "EN",
     "german": "DE"
   },
@@ -37,6 +38,10 @@
       "password": "Password",
       "userhint": "<i>To login, use <b>demo</b> as username and <b>demo</b> as password.</i>",
       "username": "Username"
+    },
+    "capturemap": {
+      "recordButtonStart": "Start recording",
+      "recordButtonStop": "Stop"
     },
     "message": {
       "placeholder": "Your message",
